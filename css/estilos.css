@@ -1,0 +1,78 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 22px;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    background-color: #FFFFFF;
+    z-index: 2;
+}
+main {
+    margin-top: 80px;
+    background-color: #F3F3F3;
+    padding-top: 26px;
+    font-weight: 400;
+    font-size: 14px;
+    height: calc(100vh - 160px);
+}
+main div {
+    border-radius: 2px;
+    padding: 9px;
+    margin-bottom: 4px;
+}
+main div span {
+    color: gray;
+}
+
+main .entra__sai__na__sala {
+    background-color: #DCDCDC;
+}
+
+main .para__todos {
+    background-color: #FFFFFF; 
+}
+
+main .reservadamente {
+    background-color: #FFDEDE;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 17px;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    background-color: #FFFFFF;
+    z-index: 2;
+}
+
+footer input {
+    height: 30px;
+    width: 90%;
+    border: 0;
+    font-size: 18px;
+    font-weight: 400px;
+    font-style: italic;
+}
+
+footer img {
+    height: 26px;
+    width: auto;
+}
