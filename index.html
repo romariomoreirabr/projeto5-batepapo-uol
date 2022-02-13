@@ -13,6 +13,7 @@
 </head>
 <body>
     <nav class="escondido">
+        <div class="transparente" onclick="fecharMenuLateral()"></div>
         <div class="menu">
             <h1>Escolha um contato <br/> para enviar mensagem:</h1>
             <div class="conjutos">
@@ -59,18 +60,20 @@
     </nav>
     <header>
         <img src="img/logo 1.svg" alt="logo uol">
-        <img src="img/people 1.svg" alt="perfil">
+        <img src="img/people 1.svg" alt="perfil" onclick="abrirMenuLateral()">
     </header>
     <main>
         <div class="entra__sai__na__sala"><span>(09:21:45) </span><strong>João</strong>  entra na sala...</div>
         <div class="para__todos"><span>(09:22:28)</span>  <strong>João</strong> para <strong>Todos</strong>:  Bom dia</div>
         <div class="para__todos"><span>(09:22:38)</span>  <strong>Maria</strong> para <strong>João</strong>:  Oi João :)</div>
-        <div class="reservadamente"><span>(09:22:48)</span>  <strong>João</strong> reservadamente para <strong>Maria</strong>:  Oi gatinha quer tc?</div>
+        <div class="privado"><span>(09:22:48)</span>  <strong>João</strong> reservadamente para <strong>Maria</strong>:  Oi gatinha quer tc?</div>
         <div class="entra__sai__na__sala"><span>(09:22:58)</span>  <strong>Maria</strong>  sai da sala...</div>
     </main>
     <footer>
-        <input type="text" value="Escreva aqui...">
-        <img src="img/enviar.svg" alt="enviar">
+        <input type="text" placeholder="Escreva aqui..." autofocus>
+        <img src="img/enviar.svg" alt="enviar" data-identifier="send-message" onclick="prepararMensagem()">
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -2,6 +2,10 @@
 box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+    width: 0px;
+  }
+
 body {
     position: relative;
     font-family: 'Roboto', sans-serif;
@@ -16,6 +20,12 @@ nav {
     z-index: 3;
     position: fixed;
     top: 0;    
+}
+
+nav .transparente {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
 }
 
 nav .menu {
@@ -82,7 +92,7 @@ main {
     padding-top: 26px;
     font-weight: 400;
     font-size: 14px;
-    height: calc(100vh - 160px);
+    /* height: calc(100vh - 160px); */
 }
 main div {
     border-radius: 2px;
@@ -101,7 +111,7 @@ main .para__todos {
     background-color: #FFFFFF; 
 }
 
-main .reservadamente {
+main .privado {
     background-color: #FFDEDE;
 }
 
@@ -125,8 +135,14 @@ footer input {
     border: 0;
     font-size: 18px;
     font-weight: 400px;
-    font-style: italic;
 }
+
+footer input:focus {
+    outline: 0;
+}
+::-webkit-input-placeholder  { font-style: italic; }
+input:-moz-placeholder { font-style: italic; }
+textarea:-moz-placeholder { font-style: italic; }
 
 footer img {
     height: 26px;
