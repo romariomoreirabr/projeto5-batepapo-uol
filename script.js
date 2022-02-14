@@ -104,7 +104,7 @@ function renderizarMensagem (mensagem) {
         <div class="para__todos" data-identifier="message"><span>${mensagem.time} </span><strong>${mensagem.from}</strong> para <strong>${mensagem.to}</strong>:
           ${mensagem.text}</div>
         `
-    } else if (mensagem.type === "private-message") {
+    } else if (mensagem.type === "private-message" && (mensagem.to == nome || mensagem.from == nome)) {
         main.innerHTML += `
         <div class="privado" data-identifier="message"><span>${mensagem.time} </span><strong>${mensagem.from}</strong> para <strong>${mensagem.to}</strong>:
           ${mensagem.text}</div>
@@ -128,6 +128,9 @@ function promessPostErro (erro) {
     if (erro.response.status == 400){
         alert("Já existe um usuário com o nome " + nome);
         entrarNoSite();
+    }
+    if (funcaoQueChamou === 4){
+        window.location.reload();
     }
 }
 function promessGetSucesso (resposta) {
